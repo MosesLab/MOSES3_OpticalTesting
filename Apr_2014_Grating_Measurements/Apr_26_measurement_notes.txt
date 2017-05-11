@@ -1,0 +1,18 @@
+Notes for Apr 26 grating measurements
+
+Used takahashi beam expander setup. 
+
+Align and null fringes with m2g3 mounted. Optimize interferometer settings - do not touch taka or interferometer again. 
+
+Measure m2g3_0, m2g3_90, m2g3_180. m2g3_0 has serial number up. 90 and 180 are 90 and 180 degree rotations, in counterclockwise sense when looking at the grating surface. 
+
+Next measure m1g4 without moving mount. 
+
+Move mount to about zero defocus, remeasure m1g4. 
+
+Measure m2g1.
+
+Move mount back to original position, then measure m2g1. 
+
+This day I also installed m2g3 into flight mount, then measured surface in mount. 
+
