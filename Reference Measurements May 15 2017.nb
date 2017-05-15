@@ -1,0 +1,210 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6882,        202]
+NotebookOptionsPosition[      6029,        172]
+NotebookOutlinePosition[      6377,        187]
+CellTagsIndexPosition[      6334,        184]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"img0", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\Users\\\\Owner\\\\Documents\\\\MOSES\\\\MOSES3_OpticalTesting\\\
+\\M1G4 images\\\\M1_0_5-12_promotteddata.h5\>\"", ",", "\"\<Data\>\""}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M1G40", "=", 
+   RowBox[{
+    RowBox[{"Image", "[", 
+     RowBox[{"img0", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}], " ", "//", "ImageAdjust"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.7038714687542524`*^9, 3.7038715596421146`*^9}, 
+   3.703871916275538*^9, 3.7038730140980988`*^9, 3.703874232449497*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"img90", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\Users\\\\Owner\\\\Documents\\\\MOSES\\\\MOSES3_OpticalTesting\\\
+\\M1G4 images\\\\M1_90_5-12_promotteddata.h5\>\"", ",", "\"\<Data\>\""}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M1G490", "=", 
+   RowBox[{
+    RowBox[{"Image", "[", 
+     RowBox[{"img90", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}], " ", "//", "ImageAdjust"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.7038716015870237`*^9, 3.703871673452535*^9}, 
+   3.7038719204281425`*^9, {3.7038732543407106`*^9, 3.7038732568616548`*^9}, {
+   3.7038742376051717`*^9, 3.7038742420936995`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"img180", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\Users\\\\Owner\\\\Documents\\\\MOSES\\\\MOSES3_OpticalTesting\\\
+\\M1G4 images\\\\M1_180_5-12_promotteddata.h5\>\"", ",", "\"\<Data\>\""}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M1G4180", "=", 
+   RowBox[{
+    RowBox[{"Image", "[", 
+     RowBox[{"img180", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}], " ", "//", "ImageAdjust"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.703871704885601*^9, 3.703871762858221*^9}, 
+   3.7038719249605007`*^9, 3.703873262408329*^9, 3.703874251970434*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"img270", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\\\Users\\\\Owner\\\\Documents\\\\MOSES\\\\MOSES3_OpticalTesting\\\
+\\M1G4 images\\\\M1_270_5-12_premotteddata.h5\>\"", ",", "\"\<Data\>\""}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M1G4270", "=", 
+   RowBox[{
+    RowBox[{"Image", "[", 
+     RowBox[{"img270", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}], " ", "//", "ImageAdjust"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.703871786107898*^9, 3.7038718525008535`*^9}, 
+   3.7038719290764236`*^9, 3.7038732672470126`*^9, 3.703874263733781*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"M1G4diff900", "=", 
+   RowBox[{"ImageSubtract", "[", 
+    RowBox[{"M1G40", ",", "M1G490"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7038718700009737`*^9, 3.70387190142741*^9}, {
+   3.7038719329760427`*^9, 3.7038719350455027`*^9}, {3.7038737038033075`*^9, 
+   3.7038737322507906`*^9}, 3.7038742722753334`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"M1G4diff18090", "=", 
+   RowBox[{"ImageSubtract", "[", 
+    RowBox[{"M1G4180", ",", "M1G490"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.703871983531962*^9, 3.7038720102477264`*^9}, {
+   3.7038737449850464`*^9, 3.703873754081946*^9}, 3.703874281991999*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"M1G4diff1800", "=", 
+   RowBox[{"ImageSubtract", "[", 
+    RowBox[{"M1G4180", ",", "M1G40"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7038720190278535`*^9, 3.703872039397762*^9}, {
+   3.703873772816078*^9, 3.703873783768258*^9}, 3.7038742857430797`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<M1G4_0.jpeg\>\"", ",", "M1G40"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<M1G4_90.jpeg\>\"", ",", "M1G490"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<M1G4_180.jpeg\>\"", ",", "M1G4180"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<M1G4_270.jpeg\>\"", ",", "M1G4270"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<diff_M1G4_90_0.jpeg\>\"", ",", "M1G4diff900"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<diff_M1G4_180_90.jpeg\>\"", ",", "M1G4diff18090"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<diff_M1G4_180_0.jpeg\>\"", ",", "M1G4diff1800"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.70387327721448*^9, 3.7038733127321873`*^9}, {
+  3.7038733459496293`*^9, 3.703873378387167*^9}, {3.703873424892547*^9, 
+  3.703873460962477*^9}, {3.703873508063344*^9, 3.703873696064579*^9}, {
+  3.703873792145932*^9, 3.7038739407111306`*^9}}],
+
+Cell[BoxData["\<\"M1G4_0.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.703873949333992*^9}],
+
+Cell[BoxData["\<\"M1G4_90.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.7038739495506573`*^9}],
+
+Cell[BoxData["\<\"M1G4_180.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.703873949766415*^9}],
+
+Cell[BoxData["\<\"M1G4_270.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.7038739499982176`*^9}],
+
+Cell[BoxData["\<\"diff_M1G4_90_0.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.703873950220446*^9}],
+
+Cell[BoxData["\<\"diff_M1G4_180_90.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.703873950436881*^9}],
+
+Cell[BoxData["\<\"diff_M1G4_180_0.jpeg\"\>"], "Output",
+ CellChangeTimes->{3.7038739506775684`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.703873988310808*^9, 3.703874055698022*^9}}]
+},
+WindowSize->{759, 601},
+WindowMargins->{{Automatic, 295}, {24, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 625, 16, 107, "Input"],
+Cell[1186, 38, 687, 17, 107, "Input"],
+Cell[1876, 57, 629, 16, 107, "Input"],
+Cell[2508, 75, 633, 16, 107, "Input"],
+Cell[3144, 93, 351, 7, 30, "Input"],
+Cell[3498, 102, 298, 6, 30, "Input"],
+Cell[3799, 110, 296, 6, 30, "Input"],
+Cell[CellGroupData[{
+Cell[4120, 120, 1076, 24, 145, "Input"],
+Cell[5199, 146, 88, 1, 30, "Output"],
+Cell[5290, 149, 91, 1, 30, "Output"],
+Cell[5384, 152, 90, 1, 30, "Output"],
+Cell[5477, 155, 92, 1, 30, "Output"],
+Cell[5572, 158, 96, 1, 30, "Output"],
+Cell[5671, 161, 98, 1, 30, "Output"],
+Cell[5772, 164, 99, 1, 30, "Output"]
+}, Open  ]],
+Cell[5886, 168, 139, 2, 30, "Input"]
+}
+]
+*)
+
