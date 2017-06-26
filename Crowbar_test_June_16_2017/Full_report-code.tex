@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\title{Crowbar Test with Subtracted Reference}
+\author{MiKaela Barker}
+
+\begin{document}
+
+\maketitle
+Measurements taken have a subtracted reference made by averaging several references. These references are formed from the average of four rotation angles of the MOSES I primary mirror. Experimentation completed June 16, 2017, for MOSES III instrumentation testing. Measurements shown are an average of 32 single interferogram measurements using 4Sight software. Zernike values are taken from the in-program Zernike polynomial worksheet. For use in comparing placement of the mirror to overall mirror surface aberrations, in order to prepare to correct mirror figure. Definitions for each of the tests can be found in Section \ref{descriptors}. 
+
+\section{Graph of Individual Tests}
+The first ten Zernike polinomials are taken from the 4Sight software and used to generate visual graphs to determine the ideal positioning of the MOSES II mirror in its flight mount. The following are several graphs showing this. The first shows all tests and all polinomials. The following are individual tests.
+
+\begin{figure}[h!]
+\includegraphics[width=.8\linewidth]{GraphData_IndividualTests_minusref2.eps}
+\caption{Chart of All Test Zernikes}
+\label{minrefgraph}
+\end{figure}
+\begin{figure}
+\includegraphics[scale=0.25]{GraphData_IndividualTests_minusref2}
+\caption{*LabelinngSystem*}
+\label{alltestsminref}
+\end{figure}
+
+\section{Test Name Descriptions}\label{descriptors}
+Pre-Crowbar displayes the measuremnts of the mirror before any adjustments were made.
+Pitch Plus shows a movement of the mirror such that it is tilted in the plus direction.
+Pitch Minus is the opposite---the mirror is tilted in the minus direction.
+Push Up is a shift of the mirror upwards from center in the mount.
+Push Down, a shift of the mirror downwards from center in the mount.
+Push  Y Plus is a shift of the mirror in the Y+ direction according to MOSES coordinates.
+Push Y Minus is a shift in the mirror in the Y- direction in the mirror mount.
+Pounding is the shifting of the mirror in various directions with the purpose to settle it into a position of least tension, and therefore, lowest energy.
+
+\end{document}
