@@ -1,0 +1,32 @@
+Moses II Optical Measurement Procedure
+June 6, 2017
+
+1. Align M1 and take exact measuremnts.
+	-Align system[interferometer and telescope] till incident on optical axis defined from the interferometer lens.
+	-Adjust mount to center of optical axis, returning rays incident on interferometer.
+	-Make micro-alignments to center and null fringes.
+	-Take exact measurements of distances for reference
+
+2. Align M2 and take exact measurments.
+	-Move M2 mount 7inches closer to the system than M1, measuring form mirror to mirror.
+	-Adjust mount to center of optical axis, returning rays incident on interferometer.
+	-Make microalignments to the mount to form fringes.
+	-Null fringes using interferometer adjustment system.
+	-Mask any visible edges or significant dust particles.
+	-Save [M2_measurement_1_6_6_17.h5].
+	-Make precise distance measurements of system.
+
+3. Realign M1 set up, without moving the system
+	-Create and utilize a "stabilization system" for ensuring repeatable positions when rotating the mirror.
+	-With M1 7inches back from M2 position, make microalignments to center fringes.
+	 Fringe nulling should only have to be minimal.
+	-Mask any visible edges or dust particles.
+	-Record data.
+	-Repeat for each rotation, 0,90,180,270 degrees.
+		Serial code facing up is 0 degrees.
+		Rotation is clockwise when facing the mirror
+	-Save each file
+		[M1G4_measurement_0_6_6_17.h5 ; M1G4_measurement_90_6_6_17.h5 ; M1G4_measurement_180_6_6_17.h5 ; 				M1G4_measurement_270_6_6_17.h5].
+	-Photograph set-up.
+
+4. Begin analysis.

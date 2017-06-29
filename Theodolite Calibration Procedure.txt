@@ -1,0 +1,22 @@
+Theodolite Calibration Procedure
+June 29, 2017
+
+The autocolimation of the theodolite allows for precise measurements of the angular location of reflective surfaces and percise alignmnet of optical instrumnetation (IMAGE OF THIS).
+This is used in many alignment procedures during the building of MOSES/ESIS. The Kern theoodolite uses a blue LED that passes through a cross-hair shaped hole and is emitted into the system that is being measured. The theodolite is aligned to the mirrored surface being located and then its focus is set to infinity. When both of these requirements are met, a blue cross-hair-shaped light will appear in the thodolite eyepeice. This is preciseliy aligned to the visible cross-hairs using precision-controll movement knobs locaed on the sides of the thodolite. When this is centered, the angle the mirror is located can be recorded. The angle is shown in the "circle reading eyepeice" which requires an outside light source to be read. A mirror on the side of the instrument helps direct this light into the instrument.
+After the intrumnet has been out of use, or if it has been transported, it will need to be re-calibrated. This process is detailed below.
+
+1. Level theodilite using knobs on the base of the instrument.
+2. Connect the battery to the wires that power the blue LED. This is the autocolimation attachment.
+2. Set up a flat mirror at a fair distance from the instrumnet; around 4 feet is best. Adjust mirror so that the light from the theodolite is directed back into the lens.
+3. In a forward-facing position (near 90 degrees),  locate and align the blue cross with the crosshairs. This requires a lot of focusing at first. Ensure the blue cross is sharp in order to align the system very precisely.
+4. Using the circle reading eyepeice, record the verticle angle as exactly as possible. re-write this degrees-minutes-seconds measurment in decimal form. Label this measurement "A".
+	ex: 91 deg 48'24" = (91)+(48/60)+(24/3600) = 91.80666667deg
+5. rotate the thheodelite around its stand 180 deg and flip the scope to once again face the mirror.
+6. Relocate the mirror in the lens and focus to the sharp blue cross. align precicely, as before, and record the verticle angle. Convert to decimal form and label "B".
+7. Complete the following algebra:
+		(A + B)-360 = calibration error
+		callibration error/2 = required change [i]
+		B+i = corrected angle value
+8. Using only the silver dial, move the B value in the circle reading eyepeice to the corrected angle value.
+9. Remove the flat-head-screw-shaped cover on the side of the theodelite labeled with the serial number. Locate the very small screw inside. While looking into the reading eyepeice, adjust this screw. This will change the position of the sliding lined screen labeled V. INSERT PHOTO. Adjust untill the thick line is inside the thin ones. The theodolite should not be calibrated.
+10. Move the system around and repeat the experiment from 1-6. If the A and B measurements added together does not equal 360deg+-2",repeat steps 7-9.
