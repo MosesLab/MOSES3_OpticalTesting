@@ -48,6 +48,8 @@ d_dx[Npix-1] = 1.0
 d_dx *= lambda/integration_length_used
 d_dy = reform(d_dx, 1, Npix)  ;kernel for differentiation wrt y.
 
+print, d_dx
+
 ;CREATE PROPERLY PADDED, MASKED AND FILTERED WFE ARRAY
 ;Npad = Npix/2 + 1 ;Leave room for the kernels to hang off the edge.
 ;wfe_big_real = replicate(NaN, Nx+Npad, Ny+Npad) 
@@ -68,22 +70,35 @@ d_dy = reform(d_dx, 1, Npix)  ;kernel for differentiation wrt y.
 
 
 Nfilter = round(filter_length/dx)
-wfe_big_real = smooth(wfe, Nfilter, /NAN)
+;wfe = smooth(wfe, Nfilter)
    ;This will result in some cross-talk between horizontal and vertical gradients
    ;around the edge of a non-square mirror. However, this is the sort of filtering
    ;that appears to be ISO standard.
 ;wfe_big_real[Nx:*,*] = NaN ;Restore the NaN padding that was smeared over by smooth.
 ;wfe_big_real[*,Ny:*] = NaN ;Restore the NaN padding that was smeared over by smooth.
 
-;atv, wfe_big_real
+;plot, wfe[500,*]
+;
+;atv, wfe
+
+filter = FLTARR(Nfilter,Nfilter)
+filter[*,*] = 1.0 / N_ELEMENTS(filter)
+wfe = convol(wfe, filter)
+wfe[WHERE(wfe EQ 0.0)] = NaN
+
+;atv, wfe
+
 
 ;COMPUTE GRADIENT
-slope_x = convol(wfe_big_real, d_dx, /NAN)
-slope_y = convol(wfe_big_real, d_dy, /NAN)
+slope_x = convol(wfe, d_dx)
+slope_y = convol(wfe, d_dy)
 if keyword_set(surf) then begin
    slope_x /= 2.0
    slope_y /= 2.0
 endif
+
+slope_x[WHERE(slope_x EQ 0.0)] = NaN
+slope_y[WHERE(slope_y EQ 0.0)] = NaN
 
 atv, slope_x
 
@@ -94,6 +109,9 @@ plot, slope_x[*,500]
 slope_x_rms = sqrt(mean(slope_x^2, /NaN))
 slope_y_rms = sqrt(mean(slope_y^2, /NaN))
 slope_rms = sqrt(slope_x_rms^2 + slope_y_rms^2)
+
+print, slope_x_rms, slope_y_rms
+
    ;I am assuming that there are similar numbers of
    ;finite results in slope_x and slope_y, even though the
    ;domains may not perfectly overlap!
